@@ -1,0 +1,93 @@
+/* CSS reset */
+* {
+  padding: 0;
+  margin: 0;
+  /* vertical-align: baseline;
+  list-style: none;
+  border: 0; */
+
+  color: #3f3d56;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 37px;
+  margin-top: 68px;
+  margin-bottom: 22px;
+  font-weight: 700;
+  align-self: center;
+}
+
+.label-field {
+  font-size: 14px;
+}
+
+.container-pai {
+  width: 396px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gender-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eula {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.button {
+  font-size: 16px;
+  color: white;
+  background-color: #3f3d56;
+  width: 100%;
+  margin-bottom: 28px;
+  border-radius: 5px;
+  border: none;
+}
+
+.link-color {
+  color: cyan;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.input-n-button {
+  width: 368px;
+  height: 24px;
+}
+
+.input-border {
+  border: 1px solid #abb3a8;
+  padding: 12px 14px 11px 14px;
+  align-content: center;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+}

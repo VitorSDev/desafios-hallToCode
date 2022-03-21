@@ -38,12 +38,17 @@
             <label for="date-field" class="label-field"
               >Data de nascimento</label
             >
-            <input type="date" id="date-field" class="input space-between" />
+            <input
+              type="date"
+              id="date-field"
+              class="input space-between"
+              required
+            />
           </div>
 
           <div class="box space-between">
             <label for="country-field" class="label-field">País</label>
-            <select id="country-field" class="input">
+            <select id="country-field" class="input" required>
               <option>selecione ...</option>
               <option>Brasil</option>
               <option>Argentina</option>
@@ -77,6 +82,7 @@
             placeholder="Digite seu e-mail"
             id="email-field"
             class="input"
+            required
           />
         </div>
 
@@ -87,6 +93,7 @@
             placeholder="Crie uma senha"
             id="password-field"
             class="input"
+            required
           />
         </div>
 
@@ -99,6 +106,7 @@
             placeholder="confirmar senha"
             id="comfirm-password-field"
             class="input"
+            required
           />
         </div>
 

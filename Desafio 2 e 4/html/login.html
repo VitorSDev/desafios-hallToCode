@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- abre conexão -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- mantem a conexão -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- chama  as font selecionadas -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- importação CSS -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <form class="form">
+      <h1 class="title">Login</h1>
+      <div class="box">
+        <label for="email-field" class="label-field">Email</label>
+        <input
+          type="text"
+          class="input"
+          id="email-field"
+          placeholder="Digite seu e-mail"
+        />
+      </div>
+      <div class="box">
+        <label for="password-field" class="label-field">Senha</label>
+        <input
+          type="text"
+          class="input"
+          id="password-field"
+          placeholder="Insira sua senha"
+        />
+      </div>
+
+      <div class="eula aside">
+        <div class="">
+          <input type="checkbox" class="checkbox-field" />
+          <p>Mantenha-me conectado</p>
+        </div>
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <button class="button">Entrar</button>
+      <p class="account">
+        Ainda não tem uma conta? <a href="#">Cadastre-se</a>
+      </p>
+    </form>
+  </body>
+</html>

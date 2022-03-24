@@ -1,0 +1,179 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 798px;
+  padding: 20px 27px 12px 27px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-box {
+  margin-top: 20px;
+}
+
+.second-box {
+  margin-top: 37px;
+}
+
+.third-box {
+  margin-top: 16px;
+}
+
+.fourth-box {
+  margin-top: 16px;
+}
+
+.title-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.title {
+  color: #ff6a28;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.grey {
+  color: #61656d;
+  font-size: 16px;
+}
+
+.icon-title {
+  margin-left: 8px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #61656d;
+}
+
+.secundary-title {
+  background-color: #f0f0f0;
+  padding: 8px 0 7px 0;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #61656d;
+  text-transform: uppercase;
+}
+
+.image {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.info-box {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  height: 85px;
+  width: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.info-text {
+  margin-top: 8px;
+  color: #61656d;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.strong-info-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #ff6a28;
+  text-transform: uppercase;
+}
+
+.icon {
+  width: 20px;
+}
+
+.long-info-box {
+  background-color: #f0f0f0;
+  display: flex;
+  width: 238px;
+  height: 85px;
+  border-radius: 5px;
+}
+
+.icon-perfil {
+  height: 60px;
+  width: 60px;
+  align-self: center;
+  margin: 12px 11px 13px 19px;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perfil-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #61656d;
+}
+
+.perfil-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff6a28;
+}
+
+.list {
+  /* padding-left: 20px; */
+  margin-top: 12px;
+  list-style-position: inside;
+}
+.list-item {
+  margin-bottom: 10px;
+  color: #61656d;
+}
+
+.preparation-item {
+  margin-bottom: 20px;
+}
+
+.add-info-text {
+  margin-top: 16px;
+}
+
+.add-info-text p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #61656d;
+  line-height: 18px;
+}

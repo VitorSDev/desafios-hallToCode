@@ -17,8 +17,17 @@ body {
   justify-content: center;
 }
 
-.form {
+.container-register {
   max-width: 396px;
+  width: 100%;
+}
+
+.container-login {
+  max-width: 515px;
+  width: 100%;
+}
+
+.form {
   width: 100%;
   align-items: center;
 

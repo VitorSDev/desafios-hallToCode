@@ -20,39 +20,41 @@
     <title>Login</title>
   </head>
   <body>
-    <form class="form">
-      <h1 class="title">Login</h1>
-      <div class="box">
-        <label for="email-field" class="label-field">Email</label>
-        <input
-          type="text"
-          class="input"
-          id="email-field"
-          placeholder="Digite seu e-mail"
-        />
-      </div>
-      <div class="box">
-        <label for="password-field" class="label-field">Senha</label>
-        <input
-          type="text"
-          class="input"
-          id="password-field"
-          placeholder="Insira sua senha"
-        />
-      </div>
-
-      <div class="eula aside">
-        <div class="">
-          <input type="checkbox" class="checkbox-field" />
-          <p>Mantenha-me conectado</p>
+    <section class="container-login">
+      <form class="form">
+        <h1 class="title">Login</h1>
+        <div class="box">
+          <label for="email-field" class="label-field">Email</label>
+          <input
+            type="text"
+            class="input"
+            id="email-field"
+            placeholder="Digite seu e-mail"
+          />
         </div>
-        <a href="#">Esqueci minha senha</a>
-      </div>
+        <div class="box">
+          <label for="password-field" class="label-field">Senha</label>
+          <input
+            type="text"
+            class="input"
+            id="password-field"
+            placeholder="Insira sua senha"
+          />
+        </div>
 
-      <button class="button">Entrar</button>
-      <p class="account">
-        Ainda não tem uma conta? <a href="#">Cadastre-se</a>
-      </p>
-    </form>
+        <div class="account aside">
+          <div>
+            <input type="checkbox" class="checkbox-field" />
+            <span>Mantenha-me conectado</span>
+          </div>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+
+        <button class="button">Entrar</button>
+        <p class="account">
+          Ainda não tem uma conta? <a href="../index.html">Cadastre-se</a>
+        </p>
+      </form>
+    </section>
   </body>
 </html>

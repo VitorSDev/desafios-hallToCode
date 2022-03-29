@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 2 - Formulário</title>
+
+    <!-- abre conexão -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- mantem a conexão -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- chama  as font selecionadas -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- importação CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="container-register">
+      <form class="form">
+        <h1 class="title">Faça seu cadastro</h1>
+        <div class="box">
+          <label for="name-field" class="label-field">Nome completo</label>
+          <input
+            placeholder="Digite seu nome completo"
+            type="text"
+            id="name-field"
+            class="input"
+            required
+          />
+        </div>
+
+        <div class="aside">
+          <div class="box space-between">
+            <label for="date-field" class="label-field"
+              >Data de nascimento</label
+            >
+            <input
+              type="date"
+              id="date-field"
+              class="input space-between"
+              required
+            />
+          </div>
+
+          <div class="box space-between">
+            <label for="country-field" class="label-field">País</label>
+            <select id="country-field" class="input" required>
+              <option>selecione ...</option>
+              <option>Brasil</option>
+              <option>Argentina</option>
+              <option>Paraguai</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-genre box">
+          <span class="genre-title">Gênero:</span>
+          <div class="genre-options">
+            <div class="select-genre">
+              <input type="radio" name="gender-select" />
+              <label class="label-field">Feminino</label>
+            </div>
+            <div class="select-genre">
+              <input type="radio" name="gender-select" />
+              <label class="label-field">Masculino</label>
+            </div>
+            <div class="select-genre">
+              <input type="radio" name="gender-select" />
+              <label class="label-field">Masculino</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <label for="email-field" class="label-field">E-mail</label>
+          <input
+            type="email"
+            placeholder="Digite seu e-mail"
+            id="email-field"
+            class="input"
+            required
+          />
+        </div>
+
+        <div class="box">
+          <label for="password-field" class="label-field">Senha</label>
+          <input
+            type="password"
+            placeholder="Crie uma senha"
+            id="password-field"
+            class="input"
+            required
+          />
+        </div>
+
+        <div class="box">
+          <label for="comfirm-password-field" class="label-field"
+            >Confirme sua senha</label
+          >
+          <input
+            type="password"
+            placeholder="confirmar senha"
+            id="comfirm-password-field"
+            class="input"
+            required
+          />
+        </div>
+
+        <div class="eula">
+          <input type="checkbox" class="checkbox-field" />
+          <div>
+            <p class="">
+              Aceito os <a href="#">termos e condições</a> e concordo com as
+              <a href="#">políticas de privacidade</a> do Hall To Code.
+            </p>
+          </div>
+        </div>
+
+        <button class="button">Cadastrar</button>
+
+        <p class="account">
+          Já tem uma conta no Hall To Code?
+          <a href="./html/login.html">Entre agora</a>
+        </p>
+      </form>
+    </section>
+  </body>
+</html>

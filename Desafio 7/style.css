@@ -9,6 +9,10 @@
   font-size: 14px;
 }
 
+/* Ficou levemente diferente do modelo.
+
+O padding de baixo não está sendo  respeitado não sei porque. */
+
 body {
   display: flex;
   justify-content: center;
@@ -26,7 +30,35 @@ body {
   display: flex;
 
   width: 591px;
+  height: 161px;
   border: 1px solid var(--border);
+
+  padding: 17px 84px 19px 17px;
+  box-sizing: border-box;
+}
+
+.content {
+  margin-left: 12px;
+}
+
+.account-info {
+  display: flex;
+}
+
+.name {
+  font-weight: 700;
+  margin-right: 3px;
+  color: var(--text);
+}
+
+.verified-icon {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.nickname {
+  color: var(--icons-text);
+  margin-right: 3px;
 }
 
 .dot {
@@ -34,6 +66,56 @@ body {
   height: 3px;
   border-radius: 50%;
   background: var(--icons-text);
+  align-self: center;
+  margin-right: 3px;
+  margin-bottom: 1px;
 
   display: inline-block;
+}
+
+.date {
+  color: var(--icons-text);
+}
+
+.tweet-content {
+  margin-top: 5px;
+}
+
+.tweet-content p {
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.tweet-content-second-p {
+  margin-top: 20px;
+}
+
+.interactions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.interaction-box {
+  display: flex;
+}
+
+.icon {
+  width: 15px;
+  margin-right: 17px;
+}
+
+.infernal-diferent-marging-icon-coracaozinho {
+  margin-right: 21px;
+}
+
+.icon-text {
+  color: var(--icons-text);
+  font-size: 13px;
+}
+
+.share-icon {
+  width: 13px;
 }

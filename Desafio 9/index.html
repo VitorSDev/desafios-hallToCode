@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Joquempo</title>
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <span class="winner">Jogadora 1 ganhou!</span>
+    <section class="scoreboard">
+      <span class="player-name">Jogadora 1</span>
+      <strong class="score">01</strong>
+      <strong class="vs-small">vs</strong>
+      <strong class="score">01</strong>
+      <span class="player-name">Jogadora 2</span>
+    </section>
+
+    <section class="main-content">
+      <div class="buttons margin-right">
+        <button class="play-button p1-stone-button">Pedra</button
+        ><button class="play-button p1-paper-button">Papel</button
+        ><button class="play-button p1-scissor-button">Tesoura</button>
+      </div>
+      <div class="double-screen">
+        <div class="screen player1-screen"></div>
+        <strong class="big-vs">vs</strong>
+        <div class="screen player2-screen"></div>
+      </div>
+      <div class="buttons margin-left">
+        <button class="play-button p2-stone-button">Pedra</button
+        ><button class="play-button p2-paper-button">Papel</button
+        ><button class="play-button p2-scissor-button">Tesoura</button>
+      </div>
+    </section>
+
+    <section class="double-buttons">
+      <button class="start-reset-button">Iniciar</button>
+      <button class="start-reset-button">Resetar</button>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

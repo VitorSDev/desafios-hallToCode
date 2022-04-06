@@ -21,11 +21,18 @@ body {
 .container-register {
   max-width: 396px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-login {
   max-width: 515px;
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form {
@@ -123,8 +130,6 @@ a {
   margin-bottom: 30px;
 }
 
-/* criei uma classe nova pq não estava encontrando qual utilizar e queria deixar igualzinho o figma =/ */
-
 .align {
   text-align: center;
   width: 310px;
@@ -134,12 +139,76 @@ a {
 
 @media (max-width: 400px) {
   .container-register {
-    max-width: 370px;
+    max-width: 350px;
+  }
+
+  .container-login {
+    max-width: 350px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .device-400 {
+    font-size: 13px;
   }
 }
 
 @media (min-width: 2500px) {
-  body {
+  * {
+    font-size: 21px;
+  }
+
+  .container-register {
+    max-width: 594px;
     height: 100vh;
+  }
+
+  .container-login {
+    max-width: 772px;
+    height: 100vh;
+  }
+
+  .title {
+    font-size: 55px;
+    margin: 90px 0 33px;
+  }
+
+  .genre-title {
+    margin-bottom: 12px;
+  }
+
+  .label-field {
+    margin-bottom: 6px;
+  }
+
+  .eula {
+    margin-bottom: 42px;
+  }
+
+  .checkbox-field {
+    min-height: 27px;
+    min-width: 27px;
+    margin-right: 15px;
+  }
+
+  .input {
+    height: 60px;
+  }
+
+  .button {
+    font-size: 24px;
+    margin-bottom: 42px;
+  }
+
+  .align {
+    width: 465px;
+    font-size: 24px;
+  }
+
+  .radial {
+    width: 19px;
+    height: 19px;
   }
 }

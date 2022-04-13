@@ -1,0 +1,180 @@
+:root {
+  --grey: rgb(59, 59, 59);
+}
+
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.first-section div {
+  background-color: var(--grey);
+  width: 70px;
+  height: 400px;
+
+  margin: 0 10px 0 10px;
+  transform-origin: top;
+  border-radius: 0 0 5px 5px;
+
+  animation-name: first-wave;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle {
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  width: 900px;
+  justify-content: left;
+}
+
+.circle div {
+  position: relative;
+  background-color: var(--grey);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.grey-circle {
+  animation-name: circles;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+}
+
+.second-section div {
+  background-color: var(--grey);
+  width: 70px;
+  height: 400px;
+
+  margin: 0 10px 0 10px;
+  transform-origin: bottom;
+  border-radius: 5px 5px 0 0;
+
+  animation-name: second-wave;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.div1 {
+  animation-delay: 0s;
+}
+
+.div2 {
+  animation-delay: 0.1s;
+}
+.div3 {
+  animation-delay: 0.2s;
+}
+
+.div4 {
+  animation-delay: 0.3s;
+}
+
+.div5 {
+  animation-delay: 0.4s;
+}
+
+.div6 {
+  animation-delay: 0.5s;
+}
+
+.div7 {
+  animation-delay: 0.6s;
+}
+
+.div8 {
+  animation-delay: 0.7s;
+}
+
+.div9 {
+  animation-delay: 0.8s;
+}
+
+.div10 {
+  animation-delay: 0.9s;
+}
+
+.reverse-div {
+  transform-origin: top;
+}
+
+@keyframes second-wave {
+  0%,
+  100% {
+    transform: scaley(1.35);
+  }
+  50% {
+    transform: scaley(0.55);
+  }
+}
+
+@keyframes first-wave {
+  0%,
+  100% {
+    transform: scaley(0.55);
+  }
+  50% {
+    transform: scaley(1.35);
+  }
+}
+
+@keyframes circles {
+  0% {
+    top: -160px;
+    left: 0;
+  }
+  10% {
+    top: -108px;
+    left: 80px;
+  }
+  20% {
+    top: -57.6px;
+    left: 160px;
+  }
+  30% {
+    top: -6.4px;
+    left: 240px;
+  }
+  40% {
+    top: 44.8px;
+    left: 320px;
+  }
+  50% {
+    top: 96px;
+    left: 400px;
+  }
+  60% {
+    top: 147.2px;
+    left: 480px;
+  }
+  70% {
+    top: 107.6px;
+    left: 560px;
+  }
+  80% {
+    top: 57px;
+    left: 640px;
+  }
+  90% {
+    top: 7px;
+    left: 720px;
+  }
+  100% {
+    top: -45px;
+    left: 800px;
+  }
+}

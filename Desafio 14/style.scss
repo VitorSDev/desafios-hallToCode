@@ -1,0 +1,97 @@
+@import "./css/_reset.scss";
+
+.calculator {
+  width: calculator-rem(352);
+  background: $black;
+  padding: calculator-rem(42) calculator-rem(19);
+
+  &__display {
+    width: 100%;
+  }
+
+  &__display--input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    color: $white;
+    outline: transparent;
+
+    font-size: calculator-rem(48);
+    text-align: right;
+  }
+
+  &__display--result {
+    color: $light-grey;
+    font-size: calculator-rem(48);
+    text-align: right;
+
+    margin-top: calculator-rem(80);
+  }
+
+  &__callback {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    &-icon {
+      width: calculator-rem(24);
+    }
+  }
+
+  &__callback span {
+    width: 100%;
+    border-bottom: 0.5px solid #4e4d4d;
+
+    margin-top: calculator-rem(20);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: calculator-rem(20);
+    }
+
+    &--button {
+      width: 73px;
+      height: 75px;
+      border-radius: 9px;
+      color: $white;
+      background-color: $grey;
+      border: none;
+
+      font-size: calculator-rem(36);
+      transition: 300ms;
+    }
+    &-button-color-green {
+      color: $green;
+    }
+
+    &-button-background-red {
+      background-color: $red;
+      color: $grey;
+    }
+
+    &-button-background-green {
+      background-color: $green;
+      color: $grey;
+    }
+
+    &--button:hover {
+      cursor: pointer;
+      background-color: lighten($grey, 20%);
+    }
+
+    &-button-background-red:hover {
+      background-color: $green;
+    }
+
+    &-button-background-green:hover {
+      background-color: $red;
+    }
+  }
+}

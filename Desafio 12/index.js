@@ -5,9 +5,20 @@ const $buttonScissor1 = document.querySelector(".p1-scissor-button");
 const $player1Screen = document.querySelector(".player1-screen");
 const $winnerTitle = document.querySelector(".winner");
 
+const $score1 = document.querySelector(".score-player1");
+const $score2 = document.querySelector(".score-player2");
+
+const $reset = document.querySelector(".reset-button");
+const $start = document.querySelector(".start-button");
+
 let player1Movement = "";
 let player2Movement = "";
 let gameResult = null;
+
+let scorePlayer1 = 0;
+let scorePlayer2 = 0;
+
+let gameStart = false;
 
 function verifyMatch() {
   if ((player1Movement == "stone") & (player2Movement == "paper")) {
@@ -64,52 +75,123 @@ const $player2Screen = document.querySelector(".player2-screen");
 // const player2ChooseScissor = () =>
 //   ($player2Screen.innerHTML = '<img src="./assets/scissors.png" class="play">');
 
+function resetBoard() {
+  $player1Screen.innerHTML = "";
+  $player2Screen.innerHTML = "";
+}
+
+function resetMoveVariables() {
+  player1Movement = "";
+  player2Movement = "";
+}
+
+function resetPlayerScore() {
+  scorePlayer1 = 0;
+  scorePlayer2 = 0;
+}
+
+function resetScoreboard() {
+  $score1.innerHTML = "00";
+  $score2.innerHTML = "00";
+}
+
+function printScoreboard() {
+  if (scorePlayer1 <= 9) {
+    $score1.innerHTML = "0" + scorePlayer1;
+  } else {
+    $score1.innerHTML = scorePlayer1;
+  }
+
+  if (scorePlayer2 <= 9) {
+    $score2.innerHTML = "0" + scorePlayer2;
+  } else {
+    $score2.innerHTML = scorePlayer2;
+  }
+}
+
+function addPoint(winnerNumber) {
+  if (winnerNumber == 1) {
+    scorePlayer1++;
+  }
+  if (winnerNumber == 2) {
+    scorePlayer2++;
+  }
+}
+
+function move(moveName, playerInfo) {
+  if (gameStart) {
+    if (playerInfo == 1) {
+      $player1Screen.innerHTML =
+        '<img src="./assets/' + moveName + '.png" class="play">';
+      player1Movement = moveName;
+    } else if (playerInfo == 2) {
+      $player2Screen.innerHTML =
+        '<img src="./assets/' + moveName + '.png" class="play">';
+      player2Movement = moveName;
+    }
+    verifyMatch();
+    printWinner();
+    if (gameResult != null) {
+      setTimeout(resetBoard, 2000);
+      resetMoveVariables();
+      addPoint(gameResult);
+      printScoreboard();
+      gameResult = null;
+    }
+  }
+}
+
 // player 1 buttons
 $buttonStone1.addEventListener("click", function () {
-  $player1Screen.innerHTML = '<img src="./assets/stone.png" class="play">';
-  player1Movement = "stone";
-  //console.log(player1Movement)
-  verifyMatch();
-  printWinner();
+  move("stone", 1);
 });
 
 $buttonPaper1.addEventListener("click", function () {
-  $player1Screen.innerHTML = '<img src="./assets/paper.png" class="play">';
-  player1Movement = "paper";
-  //console.log(player1Movement)
-  verifyMatch();
-  printWinner();
+  move("paper", 1);
 });
 
 $buttonScissor1.addEventListener("click", function () {
-  $player1Screen.innerHTML = '<img src="./assets/scissors.png" class="play">';
-  player1Movement = "scissor";
-  //console.log(player1Movement)
-  verifyMatch();
-  printWinner();
+  move("scissor", 1);
 });
 
 // player 2 buttons
 $buttonStone2.addEventListener("click", function () {
-  $player2Screen.innerHTML = '<img src="./assets/stone.png" class="play">';
-  player2Movement = "stone";
-  //console.log(player2Movement)
-  verifyMatch();
-  printWinner();
+  move("stone", 2);
 });
 
 $buttonPaper2.addEventListener("click", function () {
-  $player2Screen.innerHTML = '<img src="./assets/paper.png" class="play">';
-  player2Movement = "paper";
-  //console.log(player2Movement)
-  verifyMatch();
-  printWinner();
+  move("paper", 2);
 });
 
 $buttonScissor2.addEventListener("click", function () {
-  $player2Screen.innerHTML = '<img src="./assets/scissors.png" class="play">';
-  player2Movement = "scissor";
-  //console.log(player2Movement)
-  verifyMatch();
-  printWinner();
+  move("scissor", 2);
+});
+
+$reset.addEventListener("click", function () {
+  resetBoard();
+  resetScoreboard();
+  resetPlayerScore();
+  gameResult = null;
+  resetMoveVariables();
+  $winnerTitle.innerHTML = "Resultado";
+
+  // location.reload();
+});
+
+$start.addEventListener("click", function () {
+  // if (!gameStart) {
+  //   gameStart = true;
+  //   $start.classList.add("start");
+  // } else {
+  //   gameStart = false;
+  //   $start.classList.remove("start");
+
+  gameStart = !gameStart;
+  $start.classList.toggle("start");
+
+  if (gameStart) {
+    $start.innerHTML = "Pausar";
+  } else {
+    $start.innerHTML = "Iniciar";
+  }
 });

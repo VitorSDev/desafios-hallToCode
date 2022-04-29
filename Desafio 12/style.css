@@ -204,3 +204,7 @@ body {
 .margin-right {
   margin-right: 13px;
 }
+
+.start {
+  background-color: green;
+}

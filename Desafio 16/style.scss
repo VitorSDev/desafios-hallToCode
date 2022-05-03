@@ -1,0 +1,359 @@
+@import "./css/_reset";
+@import "./css/_variables";
+@import "./css/_mixin";
+
+.h2-title {
+  margin-top: calculator-rem(40);
+
+  font-size: calculator-remm(16);
+  font-weight: 700;
+  color: $white;
+}
+
+.button {
+  width: calculator-rem(317);
+  height: calculator-rem(54);
+
+  font-size: calculator-rem(24);
+  font-weight: 500;
+
+  border: none;
+  border-radius: calculator-rem(10);
+
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+  box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.mini-margin {
+  margin-top: 2px;
+}
+
+.mini-margin2 {
+  margin-top: 15px;
+}
+
+.light-blue {
+  background-color: $light-blue;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tic-tac-toe {
+  width: 100%;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* only visualization */
+  height: 100vh;
+
+  &__control {
+    width: 100%;
+    max-width: calculator-rem(387);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-input {
+      width: 100%;
+      max-width: calculator-rem(317);
+      height: calculator-rem(48);
+
+      font-size: calculator-rem(16);
+      font-weight: 400;
+      color: $piece-color;
+      padding: 11px 15px;
+
+      border: none;
+      border-radius: calculator-rem(10);
+    }
+
+    &-div-input {
+      margin-top: calculator-rem(20);
+
+      width: 100%;
+      height: calculator-rem(48);
+      max-width: calculator-rem(317);
+      display: flex;
+    }
+
+    &-div-input input {
+      width: 76.7%;
+
+      font-size: calculator-rem(16);
+      font-weight: 400;
+      color: $piece-color;
+      padding: 11px 15px;
+
+      border: none;
+      border-radius: calculator-rem(10) 0 0 calculator-rem(10);
+    }
+
+    &-div-input-switch {
+      margin-left: -1px;
+      width: 26.47%;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 calculator-rem(10) calculator-rem(10) 0;
+    }
+
+    &-title {
+      color: $green;
+    }
+
+    &-match {
+      margin-top: calculator-rem(20);
+
+      width: 100%;
+      max-width: calculator-rem(317);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-match span {
+      font-size: calculator-rem(16);
+      color: $white;
+    }
+
+    &-match div {
+      height: calculator-rem(32);
+      width: calculator-rem(56);
+    }
+
+    &-button1 {
+      margin-top: calculator-rem(45);
+      background-color: $green;
+      color: $white;
+    }
+
+    &-match-history {
+      height: calculator-rem(210);
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-match-history-content {
+      margin-top: calculator-rem(20);
+
+      width: 317px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-match-history-content-span {
+      color: $white;
+      font-size: calculator-rem(14);
+      font-weight: 400;
+    }
+
+    &-winning-player {
+      width: 100%;
+      max-width: calculator-rem(168);
+      height: calculator-rem(50);
+      background-color: $white;
+      border: none;
+      border-radius: calculator-rem(10);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: calculator-rem(2) calculator-rem(15);
+    }
+
+    &-winning-player span {
+      font-weight: 700;
+      color: $green;
+      font-size: calculator-rem(14);
+    }
+
+    &-winning-player p {
+      font-weight: 400;
+      font-size: calculator-rem(14);
+      color: $piece-color;
+    }
+
+    &-mini-board {
+      width: calculator-rem(49);
+      height: calculator-rem(49);
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-mini-board-div {
+      width: calculator-rem(15);
+      height: calculator-rem(15);
+
+      background-color: $white;
+      color: $piece-color;
+      font-size: calculator-rem(12);
+      font-weight: 700;
+      text-align: center;
+
+      border-radius: calculator-rem(2);
+      line-height: 15px;
+    }
+
+    &-button2 {
+      margin-top: calculator-rem(35);
+      color: $dark-blue;
+    }
+  }
+
+  &__content {
+    width: calculator-rem(600);
+    background-color: $light-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-scoreboard {
+      background-color: $white;
+      width: 100%;
+      max-width: calculator-rem(400);
+      height: calculator-rem(100);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      border-radius: 15px;
+    }
+
+    &-scoreboard-h2 {
+      margin-top: 11px;
+      color: $dark-blue;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &-scoreboard-score {
+      width: 100%;
+      max-width: calculator-rem(340);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-scoreboard-score-h2 {
+      font-size: calculator-rem(48);
+      color: $dark-blue;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-scoreboard-score span {
+      color: $piece-color;
+      font-weight: 500;
+      font-size: calculator-rem(16);
+      align-self: center;
+    }
+
+    &-board {
+      margin-top: calculator-rem(70);
+
+      width: calculator-rem(510);
+      height: calculator-rem(510);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-board-div {
+      background-color: $white;
+      line-height: initial;
+
+      width: 100%;
+      max-width: calculator-rem(160);
+      height: calculator-rem(160);
+
+      border-radius: calculator-rem(15);
+
+      color: $piece-color;
+      font-size: calculator-rem(130);
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__historic {
+    width: 100%;
+    max-width: calculator-rem(387);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-play-history {
+      margin-top: calculator-rem(28);
+
+      width: 100%;
+      max-width: calculator-rem(317);
+      height: calculator-rem(610);
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-history {
+      margin-top: calculator-rem(20);
+      width: 100%;
+      height: calculator-rem(50);
+      background-color: $white;
+
+      display: flex;
+      justify-content: space-between;
+      padding: calculator-rem(6) calculator-rem(10) calculator-rem(9)
+        calculator-rem(10);
+
+      border-radius: calculator-rem(10);
+    }
+
+    &-play {
+      width: 100%;
+      max-width: calculator-rem(38);
+      font-size: calculator-rem(48);
+      color: $piece-color;
+      font-weight: 700;
+
+      line-height: 35px;
+      text-align: center;
+    }
+
+    &-player-n-play {
+      width: 100%;
+      max-width: calculator-rem(243);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin-left: calculator-rem(16);
+    }
+
+    &-player-n-play span {
+      font-size: calculator-rem(14);
+      font-weight: 700;
+      color: $piece-color;
+    }
+
+    &-player-n-play p {
+      font-size: calculator-rem(14);
+      font-weight: 400;
+      color: $dark-blue;
+    }
+  }
+}

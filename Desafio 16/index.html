@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da velha</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="tic-tac-toe">
+      <section class="tic-tac-toe__control">
+        <input
+          type="text"
+          class="tic-tac-toe__control-input"
+          placeholder="Jogador 1"
+        />
+        <div class="tic-tac-toe__control-div-input">
+          <input type="text" placeholder="Jogador 2" />
+          <div class="tic-tac-toe__control-div-input-switch"></div>
+        </div>
+
+        <h2 class="h2-title tic-tac-toe__control-title">Tipo de Partida</h2>
+
+        <div class="tic-tac-toe__control-match">
+          <span>Melhor de 3</span>
+          <div></div>
+          <span>Melhor de 5</span>
+        </div>
+
+        <button class="button tic-tac-toe__control-button1">Jogar</button>
+
+        <h2 class="h2-title">Histórico de Partidas</h2>
+
+        <div class="tic-tac-toe__control-match-history">
+          <div class="tic-tac-toe__control-match-history-content">
+            <div class="tic-tac-toe__control-winning-player">
+              <span>Vencedor</span>
+              <p>Primeiro Quadrado</p>
+            </div>
+
+            <span class="tic-tac-toe__control-match-history-content-span"
+              >Cenário</span
+            >
+
+            <div class="tic-tac-toe__control-mini-board">
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div">O</span>
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+            </div>
+          </div>
+          <div class="tic-tac-toe__control-match-history-content">
+            <div class="tic-tac-toe__control-winning-player">
+              <span>Vencedor</span>
+              <p>Primeiro Quadrado</p>
+            </div>
+
+            <span class="tic-tac-toe__control-match-history-content-span"
+              >Cenário</span
+            >
+
+            <div class="tic-tac-toe__control-mini-board">
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div">O</span>
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+            </div>
+          </div>
+          <div class="tic-tac-toe__control-match-history-content">
+            <div class="tic-tac-toe__control-winning-player">
+              <span>Vencedor</span>
+              <p>Primeiro Quadrado</p>
+            </div>
+
+            <span class="tic-tac-toe__control-match-history-content-span"
+              >Cenário</span
+            >
+
+            <div class="tic-tac-toe__control-mini-board">
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div">O</span>
+              <span class="tic-tac-toe__control-mini-board-div">X</span>
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >O</span
+              >
+              <span class="tic-tac-toe__control-mini-board-div mini-margin"
+                >X</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <button class="button tic-tac-toe__control-button2">Reiniciar</button>
+      </section>
+
+      <div class="light-blue">
+        <section class="tic-tac-toe__content">
+          <div class="tic-tac-toe__content-scoreboard">
+            <h2 class="tic-tac-toe__content-scoreboard-h2">Placar</h2>
+            <div class="tic-tac-toe__content-scoreboard-score">
+              <h2 class="tic-tac-toe__content-scoreboard-score-h2">01</h2>
+              <span>Jogador 1</span>
+              <h2 class="tic-tac-toe__content-scoreboard-score-h2">01</h2>
+            </div>
+          </div>
+
+          <div class="tic-tac-toe__content-board">
+            <span class="tic-tac-toe__content-board-div">X</span>
+            <span class="tic-tac-toe__content-board-div">O</span>
+            <span class="tic-tac-toe__content-board-div"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+            <span class="tic-tac-toe__content-board-div mini-margin2"></span>
+          </div>
+        </section>
+      </div>
+
+      <section class="tic-tac-toe__historic">
+        <h2 class="h2-title">Histórico de jogadas</h2>
+        <div class="tic-tac-toe__historic-play-history">
+          <div class="tic-tac-toe__historic-history">
+            <span class="tic-tac-toe__historic-play">X</span>
+            <div class="tic-tac-toe__historic-player-n-play">
+              <span>Jogador 1</span>
+              <p>Primeiro Quadrado</p>
+            </div>
+          </div>
+
+          <div class="tic-tac-toe__historic-history">
+            <span class="tic-tac-toe__historic-play">O</span>
+            <div class="tic-tac-toe__historic-player-n-play">
+              <span>Jogador 2</span>
+              <p>Segundo Quadrado</p>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

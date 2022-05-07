@@ -1,0 +1,22 @@
+.switch {
+  width: 56px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: blue;
+  display: flex;
+  justify-content: left;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.slider {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.switch.active > .slider {
+  transform: translateX(21px);
+  background-color: green;
+}
